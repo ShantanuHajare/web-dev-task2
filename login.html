@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login/Signup</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="formbox">
+
+            <h2 id="title">Signup</h2>
+            <form>
+                <div class="inputgroup">
+                    <div class="inputfield" id="namefield">
+                        <input type="test" placeholder="name">
+                    </div>
+                    <div class="inputfield">
+                        <input type="email" placeholder="email">
+                    </div>
+                     <div class="inputfield">
+                        <input type="password" placeholder="password">
+                    </div>
+                    <p>Forgot  Password <a href=""> click hear</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signup"> Sign up</button>
+                    
+                    <button type="button" id="signin" class="disable"> Sign in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        
+        let signin= document.getElementById("signin")
+        let namefield= document.getElementById("namefield")
+        let title= document.getElementById("title")
+        let signup= document.getElementById("signup")
+         
+        signin.onclick =function(){
+            namefield.style.maxHeight="0";
+            title.innerHTML="Sign in";
+            signup.classList.add("disable")
+            signin.classList.remove("disable")
+
+        }
+        signup.onclick =function(){
+            namefield.style.maxHeight="60px";
+            title.innerHTML="Sign in";
+            signup.classList.remove("disable")
+            signin.classList.add("disable")
+
+        }
+        
+    </script>
+</body>
+</html>
